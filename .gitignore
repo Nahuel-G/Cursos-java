@@ -1,0 +1,17 @@
+# Java
+*.class
+*.jar
+/target/
+/build/
+
+# IDEs
+/.idea/
+.vscode/
+*.iml
+
+# Replit / Codespaces
+.replit
+
+# OS files
+.DS_Store
+Thumbs.db
