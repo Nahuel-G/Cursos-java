@@ -1,3 +1,7 @@
+package BackendTT;
+
+import java.util.Scanner;
+
 public class Practica {
     public static void main(String[] args) {
         /*En TechLab, Silvia (Product Owner) ha recibido nuevas solicitudes del cliente “Sibelius”. El equipo de desarrollo (Matías y Sabrina) se enfrenta a varios pequeños problemas cotidianos del proyecto de e-commerce. Cada uno de estos problemas se resolverá aplicando un concepto de programación. Los problemas que enfrentaremos en TalentoLab esta semana son los siguientes:
@@ -7,23 +11,37 @@ public class Practica {
         Debemos verificar si tenemos suficiente stock para cubrir una demanda específica.
         Hay que procesar una lista de productos pendientes de revisión. Primero intentaremos una solución con while y luego notaremos que for podría ser más elegante. */  
 
-    /*Variables y Operadores:
-    Creá variables para representar el precio de un producto y la cantidad deseada por el cliente. Calculá y mostrale en pantalla el costo total.
-    Modificá el precio o la cantidad y verificá el resultado. */
-    
-    /*Entrada y Salida de Datos:
-    Pedile al usuario que ingrese su nombre y la cantidad de productos que quiere comprar.
-    Mostrá un mensaje personalizado con el monto total (asignando un precio fijo por unidad). */
+        //Variables y Operadores:
+        //Creá variables para representar el precio de un producto y la cantidad deseada por el cliente. Calculá y mostrale en pantalla el costo total.
+        int precioProducto = 10;
+        //int cantidadDeseada = 5;
+        //int total = precioProducto * cantidadDeseada;
+        //System.out.println(total);
+        //Modificá el precio o la cantidad y verificá el resultado.
+        
+        //Entrada y Salida de Datos:
+        //Pedile al usuario que ingrese su nombre y la cantidad de productos que quiere comprar.
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingresa tu nombre:  ");
+        String nombreCliente = teclado.nextLine();
+        Scanner cantidad = new Scanner(System.in);
+        System.out.println("Cuantos productos queres: ");
+        double numeroCantidad = teclado.nextDouble();
+        //Mostrá un mensaje personalizado con el monto total (asignando un precio fijo por unidad).
+        double precioFinal = precioProducto * numeroCantidad;
+        System.out.println("El monto total de tu compra es: " + precioFinal);
 
-    /*Condicionales:
-    Suponé que si el cliente quiere más de 100 unidades, le ofrecemos un descuento.
-    Implementá un if que verifique si cantidad > 100. Si es así, mostrá un mensaje indicando que aplica un descuento especial. */
-
-
-
-    /*Bucles:
-    Pedile al usuario que ingrese un número, y luego usá un bucle for para imprimir desde 1 hasta ese número.
-    Repetí lo mismo con un while y compará cuál te resulta más intuitivo. */
+        //Condicionales:
+        //Suponé que si el cliente quiere más de 100 unidades, le ofrecemos un descuento.
+        //Implementá un if que verifique si cantidad > 100. Si es así, mostrá un mensaje indicando que aplica un descuento especial.
+        if (numeroCantidad >100) {
+            precioFinal = precioFinal * 0.80;
+            System.out.println("El monto total de tu compra con descuento es: " + precioFinal);
+        }
+        
+        //Bucles:
+        //Pedile al usuario que ingrese un número, y luego usá un bucle for para imprimir desde 1 hasta ese número.
+        //Repetí lo mismo con un while y compará cuál te resulta más intuitivo.
 
 
 
